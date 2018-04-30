@@ -1,5 +1,6 @@
 # psvcmd56  
 Reversed code of PS Vita SD card and related drivers  
+This fork mainly focused on simplify and reversing sceAppMgr for Vita3k use.
   
 # Description of CMD56 protocol  
   
