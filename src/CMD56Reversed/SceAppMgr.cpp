@@ -1075,77 +1075,23 @@ int label_21_cleanup(SceUID pid, const mount_ctx_t* mctx_alloc1, const void* mem
 
 int select_index(const mount_point_data_entry* glb_mpd_entry0)
 {
-   if (glb_mpd_entry0->auth_ids[0] == 0)
-      return 0;
-   else if (glb_mpd_entry0->auth_ids[1] == 0)
-      return 1;
-   else if (glb_mpd_entry0->auth_ids[2] == 0)
-      return 2;
-   else if (glb_mpd_entry0->auth_ids[3] == 0)
-      return 3;
-   else if (glb_mpd_entry0->auth_ids[4] == 0)
-      return 4;
-   else if (glb_mpd_entry0->auth_ids[5] == 0)
-      return 5;
-   else if (glb_mpd_entry0->auth_ids[6] == 0)
-      return 6;
-   else if (glb_mpd_entry0->auth_ids[7] == 0)
-      return 7;
-   else if (glb_mpd_entry0->auth_ids[8] == 0)
-      return 8;
-   else if (glb_mpd_entry0->auth_ids[9] == 0)
-      return 9;
-   else if (glb_mpd_entry0->auth_ids[10] == 0)
-      return 10;
-   else if (glb_mpd_entry0->auth_ids[11] == 0)
-      return 11;
-   else if (glb_mpd_entry0->auth_ids[12] == 0)
-      return 12;
-   else if (glb_mpd_entry0->auth_ids[13] == 0)
-      return 13;
-   else if (glb_mpd_entry0->auth_ids[14] == 0)
-      return 14;
-   else if (glb_mpd_entry0->auth_ids[15] == 0)
-      return 15;
-   else
-      return -1;
+   for (uint8_t i = 0; i <= 15; i++) {
+       if (glb_mpd_entry0->auth_ids[i] == 0)
+           return i;
+   }
+   
+   return -1;
 }
 
 int clear_authid(mount_point_data_entry* glb_mpd_entry0, SceUInt64 auth_id)
 {
-   if (auth_id == glb_mpd_entry0->auth_ids[0])
-      glb_mpd_entry0->auth_ids[0] = 0LL;
-   else if (auth_id == glb_mpd_entry0->auth_ids[1])
-      glb_mpd_entry0->auth_ids[1] = 0LL;
-   else if (auth_id == glb_mpd_entry0->auth_ids[2])
-      glb_mpd_entry0->auth_ids[2] = 0LL;
-   else if (auth_id == glb_mpd_entry0->auth_ids[3])
-      glb_mpd_entry0->auth_ids[3] = 0LL;
-   else if (auth_id == glb_mpd_entry0->auth_ids[4])
-      glb_mpd_entry0->auth_ids[4] = 0LL;
-   else if (auth_id == glb_mpd_entry0->auth_ids[5])
-      glb_mpd_entry0->auth_ids[5] = 0LL;
-   else if (auth_id == glb_mpd_entry0->auth_ids[6])
-      glb_mpd_entry0->auth_ids[6] = 0LL;
-   else if (auth_id == glb_mpd_entry0->auth_ids[7])
-      glb_mpd_entry0->auth_ids[7] = 0LL;
-   else if (auth_id == glb_mpd_entry0->auth_ids[8])
-      glb_mpd_entry0->auth_ids[8] = 0LL;
-   else if (auth_id == glb_mpd_entry0->auth_ids[9])
-      glb_mpd_entry0->auth_ids[9] = 0LL;
-   else if (auth_id == glb_mpd_entry0->auth_ids[10])
-      glb_mpd_entry0->auth_ids[10] = 0LL;
-   else if (auth_id == glb_mpd_entry0->auth_ids[11])
-      glb_mpd_entry0->auth_ids[11] = 0LL;
-   else if (auth_id == glb_mpd_entry0->auth_ids[12])
-      glb_mpd_entry0->auth_ids[12] = 0LL;
-   else if (auth_id == glb_mpd_entry0->auth_ids[13])
-      glb_mpd_entry0->auth_ids[13] = 0LL;
-   else if (auth_id == glb_mpd_entry0->auth_ids[14])
-      glb_mpd_entry0->auth_ids[14] = 0LL;
-   else if (auth_id == glb_mpd_entry0->auth_ids[15])
-      glb_mpd_entry0->auth_ids[15] = 0LL;
-
+   for (uint8_t i = 0; i <= 15; i++) {
+       if (auth_id == glb_mpd_entry0->auth_ids[i]) {
+          glb_mpd_entry0->auth_ids[i] = 0LL;
+          return 0;
+       }
+   }
+   
    return 0;
 }
 
@@ -1355,40 +1301,11 @@ int label_154_cleanup(SceUID pid, unsigned int mount_id, mount_ctx_t *mctx_alloc
 
 int select_index_136(mount_point_data_entry *mpd_entry_alloc2)
 {
-   if (mpd_entry_alloc2->auth_ids[0] == 0)
-      return 0;
-   else if (mpd_entry_alloc2->auth_ids[1] == 0)
-      return 1;
-   else if (mpd_entry_alloc2->auth_ids[2] == 0)
-      return 2; 
-   else if (mpd_entry_alloc2->auth_ids[3] == 0)
-      return 3;
-   else if (mpd_entry_alloc2->auth_ids[4] == 0)
-      return 4;
-   else if (mpd_entry_alloc2->auth_ids[5] == 0)
-      return 5;
-   else if (mpd_entry_alloc2->auth_ids[6] == 0)
-      return 6;
-   else if (mpd_entry_alloc2->auth_ids[7] == 0)
-      return 7;
-   else if (mpd_entry_alloc2->auth_ids[8] == 0)
-      return 8;
-   else if (mpd_entry_alloc2->auth_ids[9] == 0)
-      return 9;
-   else if (mpd_entry_alloc2->auth_ids[10] == 0)
-      return 10;
-   else if (mpd_entry_alloc2->auth_ids[11] == 0)
-      return 11;
-   else if (mpd_entry_alloc2->auth_ids[12] == 0)
-      return 12;
-   else if (mpd_entry_alloc2->auth_ids[13] == 0)
-      return 13;
-   else if (mpd_entry_alloc2->auth_ids[14] == 0)
-      return 14;
-   else if (mpd_entry_alloc2->auth_ids[15] == 0)
-      return 15;
-   else 
-      return -1;
+   for (uint8_t i = 0; i <= 15; i++) 
+      if (mpd_entry_alloc2->auth_ids[i] == 0)
+         return i;
+   
+   return -1;
 }
 
 int create_mountpoint_base_23D9B50(SceUID pid, mount_ctx_holder_t *mount_ctx_holder, unsigned int mount_id, char *title_id, char *physical_path, char *mount_drive, char *klicensee, char *gen_mount_point)
